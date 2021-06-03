@@ -65,7 +65,7 @@ const Layered: React.FC<FarmsProps> = (farmsProps) => {
         // if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
         //   return farm
         // }
-        const cakeRewardPerBlock = new BigNumber(farm.mousePerBlock || 1).times(new BigNumber(farm.poolWeight)) .div(new BigNumber(10).pow(18))
+        const cakeRewardPerBlock = new BigNumber(farm.pamanPerBlock || 1).times(new BigNumber(farm.poolWeight)) .div(new BigNumber(10).pow(18))
         const cakeRewardPerYear = cakeRewardPerBlock.times(BLOCKS_PER_YEAR)
 
         let apy = cakePrice.times(cakeRewardPerYear);
@@ -138,7 +138,7 @@ const Layered: React.FC<FarmsProps> = (farmsProps) => {
      <div className="layered-container" style={memescontainer as React.CSSProperties} >
       <div className="layered">
       <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-        Use MOUSE to farm LM1 Tokens. 20% of deposit will be burned
+        Use PAMAN to farm LM1 Tokens. 20% of deposit will be burned
       </Heading>
         <div>
           <Divider style={margintop}/>

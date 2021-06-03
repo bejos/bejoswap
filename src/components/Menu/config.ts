@@ -4,49 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: '/',
-  },
-  {
-    label: 'Farmhub',
-    icon: 'FarmhubIcon',
-    // href: 'https://farmhub.community',
-    items: [
-      {
-        label: 'Farmhub',
-        href: 'https://farmhub.community',
-        icon: 'FarmhubIcon'
-      },
-      {
-        label: 'Toad.Farm',
-        href: 'https://toad.farm',
-        icon: 'ToadFarmIcon'
-      },
-      {
-        label: 'Mouse.Farm',
-        href: 'https://mouse.farm',
-        icon: 'MouseFarmIcon'
-      },
-      {
-        label: 'Snek.Farm',
-        href: 'https://snek.farm',
-        icon: 'SnekFarmIcon'
-      },
-      {
-        label: 'Cobra.Farm',
-        href: 'https://cobra.farm',
-        icon: 'CobraIcon'
-      },
-      {
-        label: 'Eagle.Farm',
-        href: 'https://eagle.farm',
-        icon: 'EagleFarmIcon'
-      },
-      {
-        label: 'Eagle\'s Nest',
-        href: 'https://eaglenest.finance',
-        icon: 'EagleNestIcon'
-      },
-    ]
+    href: 'https://jinchuriki.tech/',
   },
   {
     label: 'Trade',
@@ -54,13 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.mouse.farm/#/swap?outputCurrency=0x71f2f0ce6e858de06e94aad9ef0cd4fffa298034',
-        icon: 'TradeIcon',
+        href: '/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.mouse.farm/#/pool',
-        icon: 'LiquidityIcon',
+        href: '/pool',
       },
     ],
   },
@@ -70,34 +26,65 @@ const config: MenuEntry[] = [
     href: '/farms',
   },
   {
-    label: 'Breeding Ground',
-    icon: 'MouseBreeding',
+    label: 'Nests',
+    icon: 'PoolIcon',
     href: '/nests',
+  },
+  // {
+  //   label: 'Pools',
+  //   icon: 'PoolIcon',
+  //   href: '/pools',
+  // },
+  // {
+  //   label: 'Lottery',
+  //   icon: 'TicketIcon',
+  //   href: '/lottery',
+  // },
+  // {
+  //   label: 'NFT',
+  //   icon: 'NftIcon',
+  //   href: '/nft',
+  // },
+  {
+    label: 'Listing',
+    icon: 'InfoIcon',
+    items: [
+      {
+        label: 'PancakeSwap',
+        href: 'https://pancakeswap.info/token/0x238cc5438da55f1679e8509bddfaf267f2faaf30',
+      },
+      {
+        label: 'CoinGecko',
+        href: '#',
+      },
+      {
+        label: 'CoinMarketCap',
+        href: '#',
+      },
+    ],
   },
   {
     label: 'More',
     icon: 'MoreIcon',
     items: [
       {
-        label: "Github",
-        href: "https://github.com/farmhubbsc",
-        icon: 'GithubIcon', 
+        label: 'Whitepaper',
+        href: 'https://jinchuriki.tech/files/Whitepaper-Jinchuriki.pdf',
       },
       {
-        label: "Docs",
-        href: "https://docs.farmhub.community/",
-        icon: 'BooksIcon',
+        label: 'Github',
+        href: 'https://github.com/jinchuriki/',
       },
-      // {
-      //   label: "Blog",
-      //   href: "https://farmhub.medium.com/",
-      // },
+      {
+        label: 'Blog',
+        href: 'https://jinchuriki.medium.com/',
+      },
     ],
   },
   {
-    label: 'Audit by Solidity',
+    label: 'Audit by TechRate',
     icon: 'AuditIcon',
-    href: 'https://solidity.finance/audits/Farmhub/',
+    href: 'https://jinchuriki.tech/files/Jinchuriki.pdf',
   },
 ]
 

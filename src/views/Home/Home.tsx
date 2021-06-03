@@ -12,7 +12,7 @@ import NestCard from './components/NestCard'
 
 const Hero = styled.div`
 	align-items: center;
-	background-image: url('/images/mouse/3.png');
+	background-image: url('/images/paman/3.png');
 	background-repeat: no-repeat;
 	background-position: top center;
 	display: flex;
@@ -24,7 +24,7 @@ const Hero = styled.div`
 	text-align: center;
 
 	${({ theme }) => theme.mediaQueries.lg} {
-		background-image: url('/images/mouse/3.png'), url('/images/mouse/3b.png');
+		background-image: url('/images/paman/3.png'), url('/images/paman/3b.png');
 		background-position: left center, right center;
 		height: 165px;
 		padding-top: 0;
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
 			<NestCard />
 			<Hero style={spaceTop}>
 				<Heading as="h1" size="xl" mb="24px" color="secondary">
-					<img style={logoStyle} src="https://mouse.farm/images/backgrounds/mouse-logo.png" alt="Mouse farm" />
+					<img style={logoStyle} src="https://mouse.farm/images/backgrounds/mouse-logo.png" alt="Paman Swap" />
 				</Heading>
 			</Hero>
 			<div>

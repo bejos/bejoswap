@@ -9,7 +9,7 @@ export interface Farm extends FarmConfig {
   tokensInChef?: number
   poolWeight?: number
   depositFeeBP?: number
-  mousePerBlock?: number
+  pamanPerBlock?: number
     userData?: {
     allowance: BigNumber
     tokenBalance: BigNumber

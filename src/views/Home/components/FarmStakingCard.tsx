@@ -14,10 +14,10 @@ import useTokenBalance from '../../../hooks/useTokenBalance'
 import { getCakeAddress } from '../../../utils/addressHelpers'
 import useAllEarnings from '../../../hooks/useAllEarnings'
 import { getBalanceNumber } from '../../../utils/formatBalance'
-import './MouseBtn.css'
+import './PamanBtn.css'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('/images/mouse/2a.png');
+  background-image: url('/images/paman/2a.png');
   background-repeat: no-repeat;
   background-position: top right;
   min-height: 376px;
@@ -46,7 +46,7 @@ const FarmedStakingCard = () => {
   const TranslateString = useI18n()
   const farmsWithBalance = useFarmsWithBalance()
   const cakeBalance = getBalanceNumber(useTokenBalance(getCakeAddress()))
-  const mousePrice = usePriceCakeBusd().toNumber()
+  const pamanPrice = usePriceCakeBusd().toNumber()
   const allEarnings = useAllEarnings()
   const earningsSum = allEarnings.reduce((accum, earning) => {
     return accum + new BigNumber(earning).div(new BigNumber(10).pow(18)).toNumber()
@@ -85,25 +85,25 @@ const FarmedStakingCard = () => {
     justifyContent: 'center',
   }
 
-  const mouseBuyURL = 'https://exchange.mouse.farm/#/swap?outputCurrency=0x71F2f0ce6e858de06e94aad9eF0cD4FFFa298034'
+  const pamanBuyURL = 'https://exchange.mouse.farm/#/swap?outputCurrency=0x71F2f0ce6e858de06e94aad9eF0cD4FFFa298034'
 
   return (
     <StyledFarmStakingCard>
-    <a href={mouseBuyURL} target="_blank" rel="noreferrer" className="buy-mouse-btn" >Buy MOUSE</a>
+    <a href={pamanBuyURL} target="_blank" rel="noreferrer" className="buy-paman-btn" >Buy PAMAN</a>
       <CardBody>
         <Heading size="xl" mb="24px">
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
-        <CardImage src="/images/mouse/2.png" alt="cake logo" width={64} height={64} />
+        <CardImage src="/images/paman/2.png" alt="cake logo" width={64} height={64} />
         <Block>
-          <Label>{TranslateString(544, 'MOUSE to Harvest')}</Label>
+          <Label>{TranslateString(544, 'PAMAN to Harvest')}</Label>
           <CakeHarvestBalance earningsSum={earningsSum}/>
-          <Label>~${(mousePrice * earningsSum).toFixed(2)}</Label>
+          <Label>~${(pamanPrice * earningsSum).toFixed(2)}</Label>
         </Block>
         <Block>
-          <Label>{TranslateString(546, 'MOUSE in Wallet')}</Label>
+          <Label>{TranslateString(546, 'PAMAN in Wallet')}</Label>
           <CakeWalletBalance cakeBalance={cakeBalance} />
-          <Label>~${(mousePrice * cakeBalance).toFixed(2)}</Label>
+          <Label>~${(pamanPrice * cakeBalance).toFixed(2)}</Label>
         </Block>
         <Actions>
           {account ? (
@@ -115,7 +115,7 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting MOUSE')
+                ? TranslateString(548, 'Collecting PAMAN')
                 : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (

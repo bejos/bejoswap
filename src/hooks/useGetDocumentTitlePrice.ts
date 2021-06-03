@@ -4,7 +4,7 @@ import { usePriceCakeBusd } from 'state/hooks'
 const useGetDocumentTitlePrice = () => {
   const cakePriceUsd = usePriceCakeBusd()
   useEffect(() => {
-    document.title = `Mouse Farm - $${Number(cakePriceUsd).toLocaleString(undefined, {
+    document.title = `Paman Swap - $${Number(cakePriceUsd).toLocaleString(undefined, {
       minimumFractionDigits: 3,
       maximumFractionDigits: 3,
     })}`

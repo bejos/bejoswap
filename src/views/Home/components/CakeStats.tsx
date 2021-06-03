@@ -27,14 +27,14 @@ const CakeStats = () => {
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const farms = useFarms();
-  const mousePrice = usePriceCakeBusd();
+  const pamanPrice = usePriceCakeBusd();
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0);
   const cakeSupply = getBalanceNumber(circSupply);
-  const marketCap = mousePrice.times(circSupply);
+  const marketCap = pamanPrice.times(circSupply);
 
-  let mousePerBlock = 0;
-  if(farms && farms[0] && farms[0].mousePerBlock){
-    mousePerBlock = new BigNumber(farms[0].mousePerBlock).div(new BigNumber(10).pow(18)).toNumber();
+  let pamanPerBlock = 0;
+  if(farms && farms[0] && farms[0].pamanPerBlock){
+    pamanPerBlock = new BigNumber(farms[0].pamanPerBlock).div(new BigNumber(10).pow(18)).toNumber();
   }
 
   const logoStyle = {
@@ -53,10 +53,10 @@ const CakeStats = () => {
       <CardBody>
         <Heading style={txtCenter} size="xl" mb="24px">
           <img src="https://mouse.farm/images/mouse/mouse.png" style={logoStyle} alt="snek" />
-          {TranslateString(534, 'Mouse Stats')}
+          {TranslateString(534, 'Paman Stats')}
         </Heading>
         <Row>
-          <Text fontSize="14px">🖇️ {TranslateString(536, 'Total MOUSE Supply')}</Text>
+          <Text fontSize="14px">🖇️ {TranslateString(536, 'Total PAMAN Supply')}</Text>
           {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} decimals={0} />}
         </Row>
         <Row>
@@ -64,12 +64,12 @@ const CakeStats = () => {
           <CardValue fontSize="14px" value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
         </Row>
         <Row>
-          <Text fontSize="14px">🔥 {TranslateString(538, 'Total MOUSE Burned')}</Text>
+          <Text fontSize="14px">🔥 {TranslateString(538, 'Total PAMAN Burned')}</Text>
           <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} decimals={0} />
         </Row>
         <Row>
-          <Text fontSize="14px">🐣 {TranslateString(540, 'New MOUSE/block')}</Text>
-          <Text bold fontSize="14px">{mousePerBlock}</Text>
+          <Text fontSize="14px">🐣 {TranslateString(540, 'New PAMAN/block')}</Text>
+          <Text bold fontSize="14px">{pamanPerBlock}</Text>
         </Row>
       </CardBody>
     </StyledCakeStats>
